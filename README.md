@@ -8,6 +8,7 @@
     Request is handled, validated and sent to the service class for actual processing FilmRecommendationService class. Based on the requirements <br>
     the results are queried thru the JPA repository FilmRepository class. Logic has been made to use the mixture of both the entity and the query to <br>
     to fetch the results. Once it's processed JPA limits it to the first 10 objects and then the response is sent to the client via the same input mechanisms.
+    Note:- I have just created only the absoulte JPA entities which is required for the output and it's required fields.
 
 ## Test(s) <br>
     Appropriate unit test cases (6) and a single integration tests have been written for clarity and to demonstrate the results. <br>

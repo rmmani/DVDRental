@@ -11,6 +11,7 @@ import java.util.List;
 
 @Repository
 public interface FilmRepository extends JpaRepository<Film, Long> {
+    //As mentioned in the requirement, the results are fetched and then it's limited to first 10 recommendations.
     @Query("SELECT f, c.name as category, " +
             "(SELECT COUNT(r) FROM Rental r JOIN r.inventory i WHERE i.film = f AND r.customer.id = :customerId) as customerRentCount, " +
             "(SELECT COUNT(r) FROM Rental r JOIN r.inventory i WHERE i.film = f) as totalRentCount " +
